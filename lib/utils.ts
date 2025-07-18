@@ -1,16 +1,11 @@
-export function getBaseUrl() {
-    // Always prioritize environment variable if set (for production)
-    if (process.env.NEXT_PUBLIC_SITE_URL) {
-        return process.env.NEXT_PUBLIC_SITE_URL
-    }
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
 
-    // Client-side fallback
-    if (typeof window !== 'undefined') {
-        return window.location.origin
-    }
-
-    // Server-side fallback for development
-    return 'http://localhost:3000'
-} export function getCallbackUrl() {
-    return `${getBaseUrl()}/auth/callback`
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
 }
+
+// This check can be removed, it is just for tutorial purposes
+export const hasEnvVars =
+  process.env.NEXT_PUBLIC_SUPABASE_URL &&
+  process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_OR_ANON_KEY;
