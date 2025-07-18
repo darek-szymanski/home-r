@@ -12,6 +12,24 @@ dist
 dist-ssr
 *.local
 
+# Next.js
+/.next/
+/out/
+
+# Production
+/build
+
+# Local env files
+.env*.local
+.env
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -22,3 +40,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Old Vite files (can be removed after migration)
+vite.config.ts
+tsconfig.app.json
+tsconfig.node.json
+index.html
+src/
