@@ -14,7 +14,7 @@ export async function GET(request: NextRequest) {
     // Handle OAuth callback (Google)
     const supabase = await createClient();
     const { error } = await supabase.auth.exchangeCodeForSession(code);
-    
+
     if (!error) {
       redirect(next);
     } else {

@@ -54,9 +54,9 @@ export function LoginForm({
                 {error}
               </div>
             )}
-            <Button 
-              onClick={handleGoogleLogin} 
-              className="w-full" 
+            <Button
+              onClick={handleGoogleLogin}
+              className="w-full"
               disabled={isLoading}
               variant="outline"
             >

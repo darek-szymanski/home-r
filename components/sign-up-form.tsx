@@ -55,9 +55,9 @@ export function SignUpForm({
                 {error}
               </div>
             )}
-            <Button 
-              onClick={handleGoogleSignUp} 
-              className="w-full" 
+            <Button
+              onClick={handleGoogleSignUp}
+              className="w-full"
               disabled={isLoading}
               variant="outline"
             >
